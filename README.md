@@ -116,10 +116,10 @@ npx wrangler login
 #### 3. 部署静态文件到 Pages
 
 ```bash
-npx wrangler pages deploy client --project-name=locale-file-send
+npx wrangler pages deploy client --project-name=file-send
 ```
 
-部署完成后会显示 Pages 域名，例如：`https://locale-file-send.pages.dev`
+部署完成后会显示 Pages 域名，例如：`https://file-send.pages.dev`
 
 #### 4. 部署 Workers
 
@@ -127,7 +127,7 @@ npx wrangler pages deploy client --project-name=locale-file-send
 npx wrangler deploy
 ```
 
-部署完成后会显示 Workers 域名，例如：`https://locale-file-send.your-subdomain.workers.dev`
+部署完成后会显示 Workers 域名，例如：`https://file-send.your-subdomain.workers.dev`
 
 **重要提示**：首次部署需要启用 Durable Objects，免费计划需要使用 SQLite Durable Objects（已在配置中设置）。
 
@@ -140,7 +140,7 @@ npx wrangler deploy
 1. 在 [Cloudflare Dashboard](https://dash.cloudflare.com/) 中：
    - 进入你的域名设置
    - 进入 **Workers Routes**
-   - 添加路由：`yourdomain.com/ws/*` → Worker: `locale-file-send`
+   - 添加路由：`yourdomain.com/ws/*` → Worker: `file-send`
 2. 在 Pages 项目中添加自定义域名：
    - 进入 Pages 项目的 **Custom domains** 标签
    - 添加你的域名
@@ -150,7 +150,7 @@ npx wrangler deploy
 如果使用默认的 `.pages.dev` 域名，需要在域名级别配置路由：
 - 在 Cloudflare Dashboard 中进入你的账户设置
 - 找到 Workers Routes 配置
-- 添加路由：`locale-file-send.pages.dev/ws/*` → Worker: `locale-file-send`
+- 添加路由：`file-send.pages.dev/ws/*` → Worker: `file-send`
 
 **选项 C：使用 wrangler.toml 配置**
 
@@ -169,7 +169,7 @@ npx wrangler deploy
 
 ### 访问应用
 
-部署完成后，访问 **Pages 域名**（例如：`https://locale-file-send.pages.dev`）即可使用。
+部署完成后，访问 **Pages 域名**（例如：`https://file-send.pages.dev`）即可使用。
 
 **注意**：请访问 Pages 域名，而不是 Workers 域名。Workers 域名只处理 WebSocket 连接，不能直接访问。
 
@@ -177,7 +177,7 @@ npx wrangler deploy
 
 **更新静态文件：**
 ```bash
-npx wrangler pages deploy client --project-name=locale-file-send
+npx wrangler pages deploy client --project-name=file-send
 ```
 
 **更新 Workers：**
