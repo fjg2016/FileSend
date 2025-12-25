@@ -23,7 +23,7 @@
 ### 项目结构
 
 ```
-LocaleFileSend/
+FileSend/
 ├── client/             # 前端静态文件
 │   ├── index.html      # 主页面
 │   ├── app.js          # 前端逻辑
