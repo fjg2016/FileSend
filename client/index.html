@@ -21,7 +21,17 @@
         <section class="card main-card">
           <div class="card-header-row">
             <div>
-              <h2 class="card-title">快速开始</h2>
+              <div class="title-with-status">
+                <h2 class="card-title">快速开始</h2>
+                <div id="encryptionStatus" class="encryption-badge" style="display: none;">
+                  <span class="encryption-icon">🔒</span>
+                  <span id="encryptionStatusText">端到端加密</span>
+                </div>
+                <div id="noEncryptionStatus" class="no-encryption-badge" style="display: none;">
+                  <span class="no-encryption-icon">⚠️</span>
+                  <span>不加密模式</span>
+                </div>
+              </div>
               <p class="hint small">另一台设备先扫码或打开链接，点击"选择文件并发送"，即可接收。</p>
             </div>
           </div>

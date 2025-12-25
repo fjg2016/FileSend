@@ -63,8 +63,26 @@
 }
 
 .card-title {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.title-with-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+/* 在大屏幕上尝试水平布局（垂直居中） */
+@media (min-width: 601px) {
+  .title-with-status {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .card-header-row {
@@ -220,6 +238,46 @@
   color: #888;
 }
 
+.encryption-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(52, 199, 89, 0.1);
+  border: 1px solid rgba(52, 199, 89, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: #15803d;
+  width: fit-content;
+  margin: 0;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.encryption-icon {
+  font-size: 0.9rem;
+}
+
+.no-encryption-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: #92400e;
+  width: fit-content;
+  margin: 0;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.no-encryption-icon {
+  font-size: 0.9rem;
+}
+
 .qr-block {
   width: 100%;
   text-align: center;
@@ -323,6 +381,11 @@
 .file-status.sent {
   background: rgba(59, 130, 246, 0.12);
   color: #1d4ed8;
+}
+
+.file-status.error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #991b1b;
 }
 
 .file-action {
