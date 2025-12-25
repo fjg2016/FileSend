@@ -1,0 +1,21 @@
+# 使用 Workers Assets 的简化配置
+# 将静态文件和 Workers 一起部署
+
+name = "locale-file-send"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# 静态资源目录
+assets = { directory = "./client" }
+
+# Durable Objects 配置
+[[durable_objects.bindings]]
+name = "ROOM"
+class_name = "Room"
+script_name = "locale-file-send"
+
+# Durable Objects 迁移配置
+[[migrations]]
+tag = "v1"
+new_classes = ["Room"]
+

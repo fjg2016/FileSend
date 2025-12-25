@@ -1,0 +1,378 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222;
+  background: radial-gradient(circle at top, #e0f0ff 0, #f5f5f7 42%, #f5f5f7 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007aff, #34c759);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0 10px 25px rgba(0, 122, 255, 0.45);
+}
+
+.app-header h1 {
+  font-size: 1.9rem;
+  margin: 0 0 4px;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #666;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 14px 30px rgba(15, 40, 90, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.main-card {
+  padding-top: 16px;
+}
+
+.list-card {
+  padding-top: 12px;
+}
+
+.card-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hint {
+  margin: 4px 0 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.hint.small {
+  font-size: 0.85rem;
+}
+
+.hint.tiny {
+  font-size: 0.78rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn.primary {
+  background: #007aff;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(0, 122, 255, 0.35);
+}
+
+.btn.primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(0, 122, 255, 0.35);
+}
+
+.btn.outline {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.btn.outline.active {
+  border-color: #007aff;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.06);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn.wide-btn {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.progress-group {
+  margin-top: 12px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f1f1f4;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #007aff, #34c759);
+  border-radius: 999px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.app-footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.step-badge {
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 122, 255, 0.25);
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.06);
+  white-space: nowrap;
+}
+
+.code-and-qr {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 6px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.code-block {
+  flex: none;
+  padding-right: 0;
+}
+
+.hidden-code {
+  display: none;
+}
+
+.code-label {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.code-value {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+  padding: 4px 10px 4px 16px;
+  border-radius: 10px;
+  background: #0b1220;
+  color: #f8fafc;
+  text-align: left;
+}
+
+.code-desc {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.qr-block {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.18);
+}
+
+.qr-desc {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #666;
+}
+
+.copy-btn {
+  margin-top: 6px;
+  width: auto;
+  font-size: 0.8rem;
+  padding-block: 5px;
+  padding-inline: 14px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0), rgba(148, 163, 184, 0.7), rgba(148, 163, 184, 0));
+  margin: 10px 0 8px;
+}
+
+.send-area {
+  margin-top: 4px;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.file-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.5);
+  font-size: 0.85rem;
+}
+
+.file-list-item:last-child {
+  border-bottom: none;
+}
+
+.file-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-meta {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.file-status {
+  font-size: 0.78rem;
+  padding: 2px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.file-status.received {
+  background: rgba(52, 199, 89, 0.1);
+  color: #15803d;
+}
+
+.file-status.pending {
+  background: rgba(234, 179, 8, 0.12);
+  color: #92400e;
+}
+
+.file-status.sent {
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+}
+
+.file-action {
+  border: 1px solid #d0d7e2;
+  background: #fff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.file-action:hover {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: #1d4ed8;
+}
+
+.file-list-empty {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  padding: 6px 0 4px;
+}
+
+@media (min-width: 768px) {
+  .app {
+    padding: 24px 18px 32px;
+  }
+
+  .code-and-qr {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .qr-block {
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .code-block {
+    flex: 1;
+    padding-right: 4px;
+    text-align: left;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+}
+
+

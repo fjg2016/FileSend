@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <title>文件传输</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="logo-circle">⇄</div>
+        <h1>文件快传</h1>
+        <p class="subtitle">打开链接 · 扫码加入 · 随时传输文件</p>
+      </header>
+
+      <main class="app-main">
+        <section class="card main-card">
+          <div class="card-header-row">
+            <div>
+              <h2 class="card-title">快速开始</h2>
+              <p class="hint small">另一台设备先扫码或打开链接，点击"选择文件并发送"，即可接收。</p>
+            </div>
+          </div>
+
+          <div class="send-area">
+            <button id="btnPickFile" class="btn primary wide-btn">选择文件并发送</button>
+            <input id="fileInput" type="file" hidden />
+            <p id="currentSendInfo" class="hint small muted">尚未选择文件</p>
+
+            <div class="progress-group" hidden id="sendProgressGroup">
+              <div class="progress-header">
+                <span id="sendFileName"></span>
+                <span id="sendPercent">0%</span>
+              </div>
+              <div class="progress-bar">
+                <div id="sendProgress" class="progress-inner" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="code-and-qr">
+            <div class="qr-block">
+              <div id="qrcode" class="qr-box"></div>
+              <div class="qr-desc">另一台设备用浏览器扫码或打开下方链接即可加入</div>
+              <button id="btnCopyLink" class="btn outline copy-btn">复制加入链接</button>
+            </div>
+            <div class="code-block hidden-code">
+              <div class="code-label">配对码</div>
+              <div id="roomCodeText" class="code-value">000000</div>
+              <div class="code-desc">告诉对方或用二维码/链接加入同一房间</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card list-card">
+          <div class="card-header-row">
+            <div>
+              <h2 class="card-title">文件记录</h2>
+            </div>
+          </div>
+
+          <ul id="fileList" class="file-list">
+            <li class="file-list-empty">暂无未接收文件</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,30 @@
+name = "locale-file-send"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Durable Objects 配置
+[[durable_objects.bindings]]
+name = "ROOM"
+class_name = "Room"
+script_name = "locale-file-send"  # 应该与上面的 name 相同
+
+# Durable Objects 迁移配置
+# 注意：免费计划必须使用 new_sqlite_classes 而不是 new_classes
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]
+
+# 路由配置（用于 Pages + Workers 部署方式）
+# 注意：如果使用自定义域名，需要在 Cloudflare Dashboard 中配置路由
+# 或者取消注释下面的 routes 配置（需要替换为你的域名）
+# routes = [
+#   { pattern = "yourdomain.com/ws/*", zone_name = "yourdomain.com" }
+# ]
+
+# 静态文件通过 Cloudflare Pages 部署，不在这里配置
+# 静态文件目录：client/
+
+# 环境变量（可选）
+# [vars]
+# ENVIRONMENT = "production"
+

@@ -1,0 +1,19 @@
+{
+  "name": "locale-file-send",
+  "version": "2.0.0",
+  "description": "一个可以通过链接打开的文件传输应用，支持 Cloudflare 部署",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "pages:dev": "wrangler pages dev client",
+    "pages:deploy": "wrangler pages deploy client"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.21.0",
+    "ws": "^8.18.0",
+    "wrangler": "^3.0.0"
+  }
+}

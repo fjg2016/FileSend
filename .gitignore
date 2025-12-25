@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+# package-lock.json 应该提交到 Git（确保依赖版本一致）
+
+# Wrangler
+.wrangler/
+.dev.vars
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
