@@ -13,8 +13,8 @@ export default {
 
     // 处理 WebSocket 升级请求
     if (request.headers.get('Upgrade') === 'websocket') {
-      // 从 URL 路径中提取房间码，例如 /ws/123456
-      const roomMatch = url.pathname.match(/^\/ws\/([0-9]{6})$/i);
+      // 从 URL 路径中提取房间码，例如 /ws/A1B2C3
+      const roomMatch = url.pathname.match(/^\/ws\/([0-9A-Z]{6})$/i);
       if (!roomMatch) {
         return new Response('Invalid room code', { status: 400 });
       }

@@ -33,13 +33,17 @@
   function getInitialRoomCode() {
     // 1) 从 URL hash 中读取：#code-XXXXXX
     const hash = window.location.hash || '';
-    const m = hash.match(/code-([0-9]{6})/i);
+    const m = hash.match(/code-([0-9A-Z]{6})/i);
     if (m && m[1]) {
       return m[1].toUpperCase();
     }
-    // 2) 没有则生成 6 位数字
-    let n = Math.floor(Math.random() * 900000) + 100000; // 100000-999999
-    return String(n);
+    // 2) 没有则生成 6 位数字+字母组合
+    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let code = '';
+    for (let i = 0; i < 6; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
   }
 
   function setRoomCode(code) {

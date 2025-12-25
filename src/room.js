@@ -18,7 +18,7 @@ export class Room {
 
     // 从 URL 提取房间码
     const url = new URL(request.url);
-    const roomMatch = url.pathname.match(/^\/ws\/([0-9]{6})$/i);
+    const roomMatch = url.pathname.match(/^\/ws\/([0-9A-Z]{6})$/i);
     if (!roomMatch) {
       return new Response('Invalid room code', { status: 400 });
     }
